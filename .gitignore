@@ -1,0 +1,17 @@
+# данные geonames и базы для тестов и бенчмарков (scripts/download.sh)
+testdata/
+# база по умолчанию, если запускать без Volume
+db/
+
+# результаты и побочные файлы запусков
+result.json
+*.test
+*.prof
+*.part
+
+# старые копии и черновики, в сборке не участвуют
+backup/
+/changes.json
+*.gold
+
+.DS_Store
