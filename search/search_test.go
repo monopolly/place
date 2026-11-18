@@ -269,7 +269,7 @@ func BenchmarkAdd(b *testing.B) {
 	s := New()
 	b.ReportAllocs()
 	s.Begin()
-	for n := 0; n < b.N; n++ {
+	for n := 0; b.Loop(); n++ {
 		s.Add(n, n, 10, fmt.Sprintf("c%d NewYork @12345", n), []string{"@ny"})
 	}
 	s.Commit()

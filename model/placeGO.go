@@ -211,7 +211,7 @@ func ParsePlaceToStruct(r []any) (a *Place) {
 		case IndexPlaceTags:
 			a.Tags = cast.String(x) //string
 		case IndexPlaceNames:
-			a.Names = cast.StringMapString(x) //map[string]string
+			a.Names = cast.MapStringString(x) //map[string]string
 		case IndexPlaceDel:
 			a.Del = cast.Bool(x) //bool
 		}
@@ -273,11 +273,11 @@ func (a *Place) Update(k string, x any) {
 	case "tags":
 		a.Tags = cast.String(x) //string
 	case "names":
-		a.Names = cast.StringMapString(x) //map[string]string
+		a.Names = cast.MapStringString(x) //map[string]string
 	case "del":
 		a.Del = cast.Bool(x) //bool
 	}
-	return
+
 }
 
 // get struct value with function
